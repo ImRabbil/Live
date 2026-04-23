@@ -27,7 +27,7 @@ npm -v
 ```js
 var oldValue = 10; // function scope
 let count = 0;     // block scope
-const PI = 3.1416; // reassignment করা যাবে না
+const PI = Math.PI; // reassignment করা যাবে না
 ```
 
 **Practice:**
@@ -126,8 +126,8 @@ const expensive = prices.filter(p => p >= 200); // [250, 400]
 ### `find`
 
 ```js
-const users = [{id:1}, {id:2}, {id:3}];
-const user = users.find(u => u.id === 2); // {id:2}
+const users = [{ id: 1 }, { id: 2 }, { id: 3 }];
+const user = users.find(u => u.id === 2); // { id: 2 }
 ```
 
 ### `reduce`
@@ -447,7 +447,7 @@ const Badge = ({ text, color }) => (
 ## 8) Common Mistakes (শুরুতে যেগুলো হয়)
 
 - State direct mutate করা (`state.push()`)
-- `key` হিসেবে index ব্যবহার করা (dynamic list এ)
+- `key` হিসেবে index ব্যবহার করা (dynamic list এ list order বদলালে wrong re-render/bug হতে পারে)
 - `useEffect` dependency ভুল দেওয়া
 - একই logic বহু component এ copy-paste
 - error state handle না করা
